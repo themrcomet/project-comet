@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "projectcomet",
+  "version": "${version}",
+  "name": "Project Comet",
+  "description": "Performance mod targeting 100 FPS on OpenGL 2.1 / First-Gen Intel HD Graphics hardware.",
+  "authors": ["Project Comet Contributors"],
+  "contact": {
+    "sources": "https://github.com/your-org/project-comet"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.projectcomet.ProjectComet"],
+    "client": ["com.projectcomet.ProjectCometClient"],
+    "modmenu": ["com.projectcomet.config.CometModMenuIntegration"]
+  },
+  "mixins": [
+    "projectcomet.mixins.json",
+    "projectcomet.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric-api": "*",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "cloth-config": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
